@@ -12,6 +12,7 @@ const {
 	description = "Illustrator and creative director", 
 	keywords = "illustrator, creative director, UI illustration" 
 } = Astro.props;
+import { ClientRouter } from "astro:transitions";
 ---
 
 
@@ -31,6 +32,7 @@ const {
 		<slot name="head" />
 	</head>
 	<body>
+		<ClientRouter />
 		<div class="RootLayout">
 			<div class="RootContainer">
 				<slot />

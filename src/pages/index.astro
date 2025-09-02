@@ -29,6 +29,7 @@ import heroText from '../assets/images/hero-text.png';
 import mayaHero from '../assets/images/hero-img.png';
 
 import { Image } from 'astro:assets';
+import Footer from '../components/Footer.astro';
 
 const images: ImageItem[] = [
 	{ id: "1", src: farmersMarket, alt: "bag of fruits and vegetables from the farmers market", width: 920, height: 800 },
@@ -76,4 +77,5 @@ const images: ImageItem[] = [
 		</div>
 	</div>
 	<ImageGrid images={images} />
+	<Footer />
 </Layout>

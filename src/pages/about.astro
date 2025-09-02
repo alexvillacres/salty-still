@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 
 import aboutText from '../assets/images/about-text.png';
 import aboutHero from '../assets/images/maya-about.png';
+import Footer from '../components/Footer.astro';
 ---
 
 
@@ -31,4 +32,5 @@ import aboutHero from '../assets/images/maya-about.png';
         </div>
         <Image class="md:block md:absolute bottom-0 right-0 lg:w-[520px] md:w-[120px] sm:relative h-auto" src={aboutHero} alt="maya hero"/>
     </div>
+    <Footer />
 </Layout>
