@@ -1,5 +1,17 @@
 ---
 import "../styles/global.css";
+
+export interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+}
+
+const { 
+	title = "Creative Direction & Illustration | Salty Still", 
+	description = "Illustrator and creative director", 
+	keywords = "illustrator, creative director, UI illustration" 
+} = Astro.props;
 ---
 
 
@@ -10,10 +22,13 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
 		</style>
+		<slot name="head" />
 	</head>
 	<body>
 		<div class="RootLayout">
