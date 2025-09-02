@@ -14,8 +14,9 @@ import aboutHero from '../assets/images/maya-about.png';
 >
 
     <div class="font-mono tracking-tighter relative">
-        <a href="/" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">Home</a>
+        <a href="/" class="font-mono tracking-tighter absolute lg:top-0 lg:right-0 hover:text-gray-500 transition-colors duration-300 z-20 hidden lg:block">Home</a>
         <div class="flex flex-col gap-4 max-w-full md:max-w-[672px]">
+            <a href="/" class="font-mono tracking-tighter hover:text-gray-500 transition-colors duration-300 lg:hidden">Home</a>
             <Image class="w-[240px]lg:w-[640px] md:w-[420px] sm:w-[360px] h-auto mb-4" src={aboutText} alt="maya hero"/>
             <p class="text-sm md:text-base">Hi! Thank you for taking the time to look at my work.</p>
             <p class="text-sm md:text-base">I'm an illustrator and creative director, currently exploring the depths of both roles. I began my career in 2019 as a Fiverr seller, where I worked with over 1,200 clients and became a Top Rated seller for my illustration and design work under the screen name Salty Still. While that era has ended, I'll always be grateful for it and everything it taught me.</p>
@@ -24,7 +25,8 @@ import aboutHero from '../assets/images/maya-about.png';
             <p class="text-sm md:text-base">My work is concept-driven, often infused with humor and what some would affectionately call "stupid" wit.</p>
             <p class="text-sm md:text-base">Over the years, I've practiced and refined a wide range of styles, which has made me versatile— specializing primarily in crypto, web3, consumer product goods, and SaaS.</p>
             <p class="text-sm md:text-base">The style shown on my landing page remains a true expression of my personal voice.</p>
-            <p class="text-sm md:text-base">If you've read this far—thank you. Was it worth the scroll? If it yes, say hello.</p>
+            <p class="text-sm md:text-base">If you've read this far—thank you. Was it worth the scroll? If it yes, <a href="mailto:salty.still.design@gmail.com" class="font-mono tracking-tighter hover:text-gray-500 transition-colors duration-300 underline underline-offset-2">say hello.</a></p>
+            <p class="text-sm md:text-base">Want me to buy you a drink first? <a href="https://x.com/salty_still" class="font-mono tracking-tighter hover:text-gray-500 transition-colors duration-300 underline underline-offset-2">Check me out on X</a>!</p>
             <p class="text-sm md:text-base">xx, Maya</p>
         </div>
         <Image class="md:block md:absolute bottom-0 right-0 lg:w-[520px] md:w-[120px] sm:relative h-auto" src={aboutHero} alt="maya hero"/>

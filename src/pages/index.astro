@@ -64,11 +64,16 @@ const images: ImageItem[] = [
 >
 	<div class="lg:h-[440px] md:h-[460px] sm:h-[320px] relative overflow-visible">
 		<div class="z-2 flex flex-col justify-between space-between h-full">
-			<Image class="w-full max-w-[960px] md:w-[960px] h-auto w-full object-cover" src={heroText} alt="maya hero" loading="eager" width={1820} height={250} />
-			<span class="font-mono tracking-tighter text-sm md:text-base">Creative Director & Illustrator</span>
+			<div class="flex justify-between items-start">
+				<Image class="w-full max-w-[960px] md:w-[960px] h-auto w-full object-cover" src={heroText} alt="maya hero" loading="eager" width={1820} height={250} />
+				<a href="/about" class="font-mono tracking-tighter hover:text-gray-500 transition-colors duration-300 z-20 hidden lg:block">About me</a>
+			</div>
+			<div class="flex justify-between items-end">
+				<a href="/about" class="font-mono tracking-tighter hover:text-gray-500 transition-colors duration-300 z-20 lg:hidden">About me</a>
+				<span class="font-mono tracking-tighter text-sm md:text-base">Creative Director & Illustrator</span>
+			</div>
 			<Image class="h-auto object-cover md:absolute bottom-0 right-0 overflow-visible sm:relative" src={mayaHero} alt="maya hero" loading="eager" width={1860} height={830} />
 		</div>
-		<a href="/about" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">About me</a>
 	</div>
 	<ImageGrid images={images} />
 </Layout>
