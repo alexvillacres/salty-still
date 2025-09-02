@@ -5,23 +5,30 @@ import type { ImageItem } from '../types';
 import farmersMarket from '../assets/images/farmers-market.png';
 import birdLeading from '../assets/images/bird-leading.png';
 import paperPlaneCity from '../assets/images/paper-plane-city.png';
-import grassIsAlwaysGreener from '../assets/images/grass-is-always-greener.png';
+import grassIsAlwaysGreener from '../assets/gif/grass-is-always-greener.gif';
 import abstract from '../assets/images/abstract.png';
 import adventureCard from '../assets/images/adventure-card.png';
 import blume from '../assets/images/blume.png';
-import cherryPhone from '../assets/images/cherry-phone.png';
 import coinsAbstract from '../assets/images/coins-abstract.png';
 import computerRunning from '../assets/images/computer-running.png';
 import hair from '../assets/images/hair.png';
 import handsCoins from '../assets/images/hands-coins.png';
 import handsOnBlack from '../assets/images/hands-on-black.png';
 import handsTogether from '../assets/images/hands-together.png';
-import headsRoll from '../assets/images/heads-roll.png';
+import headsRoll from '../assets/gif/heads-roll.gif';
 import justDogs from '../assets/images/just-dogs.png';
 import meditateCard from '../assets/images/meditate-card.png';
 import sun from '../assets/images/sun.png';
 import toothCrown from '../assets/images/tooth-crown.png';
 import walkingOnClouds from '../assets/images/walking-on-clouds.png';
+import handSqueeze from '../assets/images/hand-squeeze.png';
+import allApple from '../assets/images/all-apple.png';
+import cherryPhone from '../assets/images/cherry-phone.png';
+import burger from '../assets/images/burger.png';
+import heroText from '../assets/images/hero-text.png';
+import mayaHero from '../assets/images/hero-img.png';
+
+import { Image } from 'astro:assets';
 
 const images: ImageItem[] = [
 	{ id: "1", src: farmersMarket, alt: "bag of fruits and vegetables from the farmers market" },
@@ -37,20 +44,28 @@ const images: ImageItem[] = [
 	{ id: "11", src: sun, alt: "sun" },
 	{ id: "12", src: walkingOnClouds, alt: "walking on clouds" },
 	{ id: "13", src: meditateCard, alt: "meditate card", rowSpan: 2, colSpan: 2 },
-	{ id: "14", src: cherryPhone, alt: "cherry phone" },
-	{ id: "15", src: toothCrown, alt: "tooth crown" },
+	{ id: "14", src: toothCrown, alt: "tooth crown" },
+	{ id: "16", src: handSqueeze, alt: "hand squeeze" },
 	{ id: "16", src: coinsAbstract, alt: "coins abstract" },
 	{ id: "17", src: abstract, alt: "abstract art" },
 	{ id: "18", src: adventureCard, alt: "adventure card", rowSpan: 2, colSpan: 2 },
-	{ id: "19", src: handsTogether, alt: "hands together" },
-	{ id: "20", src: handsCoins, alt: "hands coins" }
+	{ id: "22", src: allApple, alt: "all apple" },
+	{ id: "19", src: handsCoins, alt: "hands coins" },
+	{ id: "21", src: cherryPhone, alt: "cherry phone" },
+	{ id: "23", src: burger, alt: "burger" },
+	{ id: "20", src: handsTogether, alt: "hands together" },
+	
 ];
 ---
 
 <Layout>
-	<div class="flex flex-col justify-between space-between min-h-[420px]">
-		<h1 class="text-8xl font-bold">Maya Chungbin</h1>
-		<span class="text-lg">Creative Director & Illustrator</span>
+	<div class="h-[460px] relative overflow-visible">
+		<div class="z-2 flex flex-col justify-between space-between h-full">
+			<Image class="w-[960px] h-auto" src={heroText} alt="maya hero" />
+			<span class="font-mono tracking-tighter">Creative Director & Illustrator</span>
+		</div>
+		<Image class="z-0 w-full h-full object-cover absolute top-0 right-[24px] overflow-visible" src={mayaHero} alt="maya hero" />
+		<a href="/about" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">About me</a>
 	</div>
 	<ImageGrid images={images} />
 </Layout>

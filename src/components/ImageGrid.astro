@@ -19,7 +19,7 @@ const { images } = Astro.props as { images: ImageItem[] };
 >
   {images.map((img) => (
     <div
-      class="overflow-hidden rounded-lg bg-image-background border border-border min-h-[400px]"
+      class="overflow-hidden rounded-lg bg-image-background border border-border min-h-[380px]"
       style={`grid-column: span ${img.colSpan || 1}; grid-row: span ${
         img.rowSpan || 1
       }`}

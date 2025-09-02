@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+import aboutText from '../assets/images/about-text.png';
+import aboutHero from '../assets/images/maya-about.png';
+---
+
+
+<Layout>
+    <div class="font-mono tracking-tighter relative">
+        <a href="/" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">Home</a>
+        <div class="flex flex-col gap-4 max-w-[672px]">
+            <Image class="w-[620px] h-auto mb-4" src={aboutText} alt="maya hero"/>
+            <p>Hi! Thank you for taking the time to look at my work.</p>
+            <p>I'm an illustrator and creative director, currently exploring the depths of both roles. I began my career in 2019 as a Fiverr seller, where I worked with over 1,200 clients and became a Top Rated seller for my illustration and design work under the screen name Salty Still. While that era has ended, I'll always be grateful for it and everything it taught me.</p>
+            <p>In 2022, I returned to illustration, getting back to my roots— this time on my own as a freelancer.</p>
+            <p>Since then, I've found my home in sharing illustrations with an audience that continuously inspires me, and working with clients who do the same. Despite the winding path to this point, and the skills I've gathered in design and creative direction, I've realized that the cornerstone of my strength in any field is my love and curiosity for illustration.</p>
+            <p>My work is concept-driven, often infused with humor and what some would affectionately call "stupid" wit.</p>
+            <p>Over the years, I've practiced and refined a wide range of styles, which has made me versatile— specializing primarily in crypto, web3, consumer product goods, and SaaS.</p>
+            <p>The style shown on my landing page remains a true expression of my personal voice.</p>
+            <p>If you've read this far—thank you. Was it worth the scroll? If it yes, say hello.</p>
+            <p>xx, Maya</p>
+        </div>
+        <Image class="absolute bottom-0 right-0 w-[520px] h-auto" src={aboutHero} alt="maya hero"/>
+    </div>
+</Layout>
