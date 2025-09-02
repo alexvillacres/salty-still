@@ -15,14 +15,13 @@ const { images } = Astro.props as { images: ImageItem[] };
 ---
 
 <div
-  class="grid grid-cols-1 lg:grid-cols-3 gap-4"
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6"
+  style="grid-template-rows: repeat(auto-fill, minmax(200px, auto));"
 >
   {images.map((img) => (
     <div
-      class="overflow-hidden rounded-lg bg-image-background border border-border min-h-[380px]"
-      style={`grid-column: span ${img.colSpan || 1}; grid-row: span ${
-        img.rowSpan || 1
-      }`}
+      class="overflow-hidden rounded-lg bg-image-background border border-border min-h-[200px] sm:min-h-[380px] grid-item"
+      style={`--col-span: ${img.colSpan || 1}; --row-span: ${img.rowSpan || 1};`}
     >
       <Image
         src={img.src}
@@ -31,5 +30,30 @@ const { images } = Astro.props as { images: ImageItem[] };
         class="w-full h-full object-cover"
       />
     </div>
+
+<style>
+  /* Mobile: all items span 1 column */
+  .grid-item {
+    grid-column: span 1;
+    grid-row: span var(--row-span);
+  }
+  
+  /* Tablet: 2 column grid */
+  @media (min-width: 640px) {
+    .grid-item {
+      grid-column: span min(var(--col-span), 2);
+      grid-row: span var(--row-span);
+    }
+  }
+  
+  /* Desktop: 3 column grid */
+  @media (min-width: 1024px) {
+    .grid-item {
+      grid-column: span var(--col-span);
+      grid-row: span var(--row-span);
+    }
+  }
+</style>
   ))}
+</div>
 </div>

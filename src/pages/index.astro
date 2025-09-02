@@ -59,12 +59,12 @@ const images: ImageItem[] = [
 ---
 
 <Layout>
-	<div class="h-[460px] relative overflow-visible">
+	<div class="lg:h-[440px] md:h-[460px] sm:h-[320px] relative overflow-visible">
 		<div class="z-2 flex flex-col justify-between space-between h-full">
-			<Image class="w-[960px] h-auto" src={heroText} alt="maya hero" />
-			<span class="font-mono tracking-tighter">Creative Director & Illustrator</span>
+			<Image class="w-full max-w-[960px] md:w-[960px] h-auto w-full object-cover" src={heroText} alt="maya hero" />
+			<span class="font-mono tracking-tighter text-sm md:text-base">Creative Director & Illustrator</span>
+			<Image class="h-auto object-cover md:absolute bottom-0 right-0 overflow-visible sm:relative" src={mayaHero} alt="maya hero" />
 		</div>
-		<Image class="z-0 w-full h-full object-cover absolute top-0 right-[24px] overflow-visible" src={mayaHero} alt="maya hero" />
 		<a href="/about" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">About me</a>
 	</div>
 	<ImageGrid images={images} />
