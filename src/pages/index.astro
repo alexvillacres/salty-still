@@ -1,11 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageGrid from '../components/ImageGrid.astro';
+import type { ImageItem } from '../types';
+import farmersMarket from '../assets/images/farmers-market.png';
+import birdLeading from '../assets/images/bird-leading.png';
+import paperPlaneCity from '../assets/images/paper-plane-city.png';
+import grassIsAlwaysGreener from '../assets/images/grass-is-always-greener.png';
+import abstract from '../assets/images/abstract.png';
+import adventureCard from '../assets/images/adventure-card.png';
+import blume from '../assets/images/blume.png';
+import cherryPhone from '../assets/images/cherry-phone.png';
+import coinsUp from '../assets/images/coins-up.png';
+import computerRunning from '../assets/images/computer-running.png';
+import hair from '../assets/images/hair.png';
+import handsCoins from '../assets/images/hands-coins.png';
+import handsOnBlack from '../assets/images/hands-on-black.png';
+import handsTogether from '../assets/images/hands-together.png';
+import headsRoll from '../assets/images/heads-roll.png';
+import justDogs from '../assets/images/just-dogs.png';
+import mayaHero from '../assets/images/maya-hero.png';
+import meditateCard from '../assets/images/meditate-card.png';
+import sun from '../assets/images/sun.png';
+import toothCrown from '../assets/images/tooth-crown.png';
+import walkingOnClouds from '../assets/images/walking-on-clouds.png';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const images: ImageItem[] = [
+	{ id: "1", src: farmersMarket, alt: "bag of fruits and vegetables from the farmers market" },
+	{ id: "2", src: birdLeading, alt: "two characters being lead by a bird" },
+	{ id: "3", src: paperPlaneCity, alt: "two characters throwing paper planes in a city" },
+	{ id: "4", src: grassIsAlwaysGreener, alt: "orange hair girl on a picnic blanket in the grass", rowSpan: 2, colSpan: 3 },
+	{ id: "5", src: computerRunning, alt: "computer running" },
+	{ id: "6", src: justDogs, alt: "just dogs" },
+	{ id: "7", src: blume, alt: "blume" },
+	{ id: "8", src: handsOnBlack, alt: "hands on black", rowSpan: 2, colSpan: 3 },
+	{ id: "9", src: headsRoll, alt: "heads roll", rowSpan: 2, colSpan: 2 },
+	{ id: "10", src: hair, alt: "hair" },
+	{ id: "11", src: sun, alt: "sun" },
+	{ id: "12", src: walkingOnClouds, alt: "walking on clouds" },
+	{ id: "13", src: meditateCard, alt: "meditate card", rowSpan: 2, colSpan: 2 },
+	{ id: "14", src: cherryPhone, alt: "cherry phone" },
+	{ id: "15", src: toothCrown, alt: "tooth crown" },
+	{ id: "16", src: coinsUp, alt: "coins up" },
+	{ id: "17", src: abstract, alt: "abstract art" },
+	{ id: "18", src: adventureCard, alt: "adventure card", rowSpan: 2, colSpan: 2 },
+	{ id: "19", src: handsTogether, alt: "hands together" },
+	{ id: "20", src: handsCoins, alt: "hands coins" }
+];
 ---
 
 <Layout>
-	<a href="/">Home</a>
-    <a href="/about/">About</a>
+	<div class="flex flex-col justify-between space-between min-h-[420px]">
+		<h1 class="text-8xl font-bold">Maya Chungbin</h1>
+		<span class="text-lg">Creative Director & Illustrator</span>
+	</div>
+	<ImageGrid images={images} />
 </Layout>
