@@ -31,39 +31,38 @@ import mayaHero from '../assets/images/hero-img.png';
 import { Image } from 'astro:assets';
 
 const images: ImageItem[] = [
-	{ id: "1", src: farmersMarket, alt: "bag of fruits and vegetables from the farmers market" },
-	{ id: "2", src: birdLeading, alt: "two characters being lead by a bird" },
-	{ id: "3", src: paperPlaneCity, alt: "two characters throwing paper planes in a city" },
-	{ id: "4", src: grassIsAlwaysGreener, alt: "orange hair girl on a picnic blanket in the grass", rowSpan: 2, colSpan: 3 },
-	{ id: "5", src: computerRunning, alt: "computer running" },
-	{ id: "6", src: justDogs, alt: "just dogs" },
-	{ id: "7", src: blume, alt: "blume" },
-	{ id: "8", src: handsOnBlack, alt: "hands on black", rowSpan: 2, colSpan: 3 },
-	{ id: "9", src: headsRoll, alt: "heads roll", rowSpan: 2, colSpan: 2 },
-	{ id: "10", src: hair, alt: "hair" },
-	{ id: "11", src: sun, alt: "sun" },
-	{ id: "12", src: walkingOnClouds, alt: "walking on clouds" },
-	{ id: "13", src: meditateCard, alt: "meditate card", rowSpan: 2, colSpan: 2 },
-	{ id: "14", src: toothCrown, alt: "tooth crown" },
-	{ id: "16", src: handSqueeze, alt: "hand squeeze" },
-	{ id: "16", src: coinsAbstract, alt: "coins abstract" },
-	{ id: "17", src: abstract, alt: "abstract art" },
-	{ id: "18", src: adventureCard, alt: "adventure card", rowSpan: 2, colSpan: 2 },
-	{ id: "22", src: allApple, alt: "all apple" },
-	{ id: "19", src: handsCoins, alt: "hands coins" },
-	{ id: "21", src: cherryPhone, alt: "cherry phone" },
-	{ id: "23", src: burger, alt: "burger" },
-	{ id: "20", src: handsTogether, alt: "hands together" },
-	
+	{ id: "1", src: farmersMarket, alt: "bag of fruits and vegetables from the farmers market", width: 920, height: 800 },
+	{ id: "2", src: birdLeading, alt: "two characters being lead by a bird", width: 920, height: 800 },
+	{ id: "3", src: paperPlaneCity, alt: "two characters throwing paper planes in a city", width: 920, height: 800 },
+	{ id: "4", src: grassIsAlwaysGreener, alt: "orange hair girl on a picnic blanket in the grass", rowSpan: 2, colSpan: 3, width: 2800, height: 1360 },
+	{ id: "5", src: computerRunning, alt: "computer running", width: 940, height: 860 },
+	{ id: "6", src: justDogs, alt: "just dogs", width: 940, height: 860 },
+	{ id: "7", src: blume, alt: "blume", width: 940, height: 860 },
+	{ id: "8", src: handsOnBlack, alt: "hands on black", rowSpan: 2, colSpan: 3, width: 2800, height: 1360 },
+	{ id: "9", src: headsRoll, alt: "heads roll", rowSpan: 2, colSpan: 2, width: 1000, height: 800 },
+	{ id: "10", src: hair, alt: "hair", width: 940, height: 860 },
+	{ id: "11", src: sun, alt: "sun", width: 940, height: 860 },
+	{ id: "12", src: walkingOnClouds, alt: "walking on clouds", width: 940, height: 860 },
+	{ id: "13", src: meditateCard, alt: "meditate card", rowSpan: 2, colSpan: 2, width: 1920, height: 1800 },
+	{ id: "14", src: toothCrown, alt: "tooth crown", width: 940, height: 860 },
+	{ id: "16", src: handSqueeze, alt: "hand squeeze", width: 940, height: 860 },
+	{ id: "17", src: coinsAbstract, alt: "coins abstract", width: 940, height: 860 },
+	{ id: "18", src: abstract, alt: "abstract art", width: 940, height: 860 },
+	{ id: "19", src: adventureCard, alt: "adventure card", rowSpan: 2, colSpan: 2, width: 1920, height: 1800 },
+	{ id: "20", src: allApple, alt: "all apple", width: 940, height: 860 },
+	{ id: "21", src: handsCoins, alt: "hands coins", width: 940, height: 860 },
+	{ id: "22", src: cherryPhone, alt: "cherry phone", width: 940, height: 860 },
+	{ id: "23", src: burger, alt: "burger", width: 940, height: 860 },
+	{ id: "24", src: handsTogether, alt: "hands together", width: 940, height: 860 },
 ];
 ---
 
 <Layout>
 	<div class="lg:h-[440px] md:h-[460px] sm:h-[320px] relative overflow-visible">
 		<div class="z-2 flex flex-col justify-between space-between h-full">
-			<Image class="w-full max-w-[960px] md:w-[960px] h-auto w-full object-cover" src={heroText} alt="maya hero" />
+			<Image class="w-full max-w-[960px] md:w-[960px] h-auto w-full object-cover" src={heroText} alt="maya hero" loading="eager" />
 			<span class="font-mono tracking-tighter text-sm md:text-base">Creative Director & Illustrator</span>
-			<Image class="h-auto object-cover md:absolute bottom-0 right-0 overflow-visible sm:relative" src={mayaHero} alt="maya hero" />
+			<Image class="h-auto object-cover md:absolute bottom-0 right-0 overflow-visible sm:relative" src={mayaHero} alt="maya hero" loading="eager" />
 		</div>
 		<a href="/about" class="font-mono tracking-tighter absolute top-0 right-0 hover:text-gray-500 transition-colors duration-300">About me</a>
 	</div>

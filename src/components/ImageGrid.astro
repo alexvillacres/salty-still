@@ -7,6 +7,8 @@ type ImageItem = {
   id: string;
   src: ImageMetadata;
   alt: string;
+  width: number;
+  height: number;
   colSpan?: number;
   rowSpan?: number;
 };
@@ -15,10 +17,10 @@ const { images } = Astro.props as { images: ImageItem[] };
 ---
 
 <div
-  class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4"
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
   style="grid-template-rows: repeat(auto-fill, minmax(200px, auto));"
 >
-  {images.map((img) => (
+  {images.map((img, index) => (
     <div
       class="overflow-hidden rounded-lg bg-image-background border border-border min-h-[200px] sm:min-h-[380px] grid-item"
       style={`--col-span: ${img.colSpan || 1}; --row-span: ${img.rowSpan || 1};`}
@@ -26,8 +28,11 @@ const { images } = Astro.props as { images: ImageItem[] };
       <Image
         src={img.src}
         alt={img.alt}
-        loading="lazy"
+        width={img.width}
+        height={img.height}
+        loading={index < 3 ? "eager" : "lazy"}
         class="w-full h-full object-cover"
+        quality={92}
       />
     </div>
 

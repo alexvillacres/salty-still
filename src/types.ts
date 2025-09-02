@@ -7,4 +7,6 @@ export type ImageItem = {
     alt: string;
     colSpan?: number;
     rowSpan?: number;
+    width: number;
+    height: number;
   };
